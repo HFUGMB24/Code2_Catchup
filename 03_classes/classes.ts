@@ -27,9 +27,11 @@ class Bookcase {
     this.room = _room
     this.books = _books
   }
+
   addBook(_newBook: Book) {
     this.books.push(_newBook)
   }
+
   searchBook(_title: string): Book | undefined {
     for (const book of this.books) {
       if (book.title == _title) {

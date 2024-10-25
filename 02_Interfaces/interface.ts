@@ -44,12 +44,20 @@ function read(_book: number, _chapter: number): string {
 //                                 "It"
 function howManyPagesDoesBookHave(_title: string): number {
 
-  for (const book of bookcase.books) {
+  // for (let i = 0; i < bookcase.books.length; i++) {
+  //   const book = bookcase.books[i];
+  //   return book.pages
+  // }
 
+  // for (const i in bookcase.books) {
+  //   const book = bookcase.books[i];
+  //   return book.pages
+  // }
+
+  for (const book of bookcase.books) {
     if (book.title == _title) {
       return book.pages
     }
-
   }
 
   return -1
