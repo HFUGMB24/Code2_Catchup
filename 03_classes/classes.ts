@@ -40,64 +40,8 @@ class Bookcase {
   }
 }
 
-
 let bookcase: Bookcase = new Bookcase("Shower", [book1, book2])
 
 bookcase.addBook(new Book("Doofe Thesis", [authorsDatabase[1]], 123, ["Blöd1", "Blöd22"]))
 
 console.log(bookcase.searchBook("It"))
-
-
-
-
-
-
-
-
-
-
-
-//               2              1
-function read(_book: number, _chapter: number): string {
-
-  let bookIndex: number = _book - 1
-  let chapterIndex: number = _chapter - 1
-
-  return bookcase.books[bookIndex].chapters[chapterIndex]
-}
-
-//                                 "It"
-function howManyPagesDoesBookHave(_title: string): number {
-
-  // for (let i = 0; i < bookcase.books.length; i++) {
-  //   const book = bookcase.books[i];
-
-  //   if (book.title == _title) {
-  //     return book.pages
-  //   }
-  // }
-
-  // for (const i in bookcase.books) {
-  //   const book = bookcase.books[i];
-
-  //   if (book.title == _title) {
-  //     return book.pages
-  //   }
-  // }
-
-  for (const book of bookcase.books) {
-
-    if (book.title == _title) {
-      return book.pages
-    }
-
-  }
-
-  return -1
-}
-
-//                                   _book  _chapter
-let chapterIWannaRead: string = read(2, 1)
-
-//console.log(howManyPagesDoesBookHave("It"))
-
