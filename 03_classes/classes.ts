@@ -38,7 +38,7 @@ class Bookcase {
         return book
       }
     }
-    return
+    return undefined
   }
 }
 
@@ -46,4 +46,4 @@ let bookcase: Bookcase = new Bookcase("Shower", [book1, book2])
 
 bookcase.addBook(new Book("Doofe Thesis", [authorsDatabase[1]], 123, ["Blöd1", "Blöd22"]))
 
-console.log(bookcase.searchBook("It"))
+console.log(bookcase.searchBook("sdfjghskdjhg"))
